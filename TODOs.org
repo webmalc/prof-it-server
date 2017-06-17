@@ -1,3 +1,12 @@
 * Issues
-** TODO config django base
+** DONE config django base
+   CLOSED: [2017-06-17 Sat 13:50]
+** TODO two factor auth
 ** TODO install and config restframework
+** TODO add product model & crud
+** TODO add photos to product model
+** TODO add flatpages
+** TODO add contact page
+** TODO add client admin
+
+
