@@ -87,6 +87,7 @@ tags
 GPATH
 GRTAGS
 GTAGS
+.#*
 
 #Project
 local_settings.py
