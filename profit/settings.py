@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django_extensions',
     'reversion',
     'rainbowtests',
+    'django_otp',
+    'django_otp.plugins.otp_static',
+    'django_otp.plugins.otp_totp',
+    'two_factor',
 
     # profit apps
     'profit',
@@ -49,6 +53,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_otp.middleware.OTPMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'profit.middleware.AdminLocaleMiddleware',
@@ -142,9 +147,9 @@ LOCALE_PATHS = (os.path.join(os.path.dirname(__file__), "locale"),
 EMAIL_SUBJECT_PREFIX = '[vishleva.com]: '
 
 # Two factor auth
-# LOGIN_URL = 'two_factor:login'
-
-# LOGOUT_URL = "admin:logout"
+LOGIN_URL = 'two_factor:login'
+LOGOUT_URL = "admin:logout"
+LOGIN_REDIRECT_URL = 'admin:index'
 
 # Celery
 BROKER_URL = 'redis://localhost:6379'
