@@ -45,10 +45,11 @@ INSTALLED_APPS = [
 
     # profit apps
     'profit',
+    'pages',
 ]
 
 MIDDLEWARE = [
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    # 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -135,7 +136,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'profit/static'), )
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'profit/static'),
+                    os.path.join(BASE_DIR, 'node_modules'), )
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',

@@ -3,7 +3,8 @@
    CLOSED: [2017-06-17 Sat 13:50]
 ** DONE two factor auth
    CLOSED: [2017-06-17 Sat 15:46]
-** TODO install and config restframework
+** DONE install and config restframework
+   CLOSED: [2017-06-17 Sat 18:53]
 ** TODO add product model & crud
 ** TODO add photos to product model
 ** TODO add flatpages
