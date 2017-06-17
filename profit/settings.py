@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_static',
     'django_otp.plugins.otp_totp',
     'two_factor',
+    'rest_framework',
 
     # profit apps
     'profit',
@@ -105,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'en-US'
 
 LANGUAGES = (('ru', 'Russian'), ('en', 'English'), )
 
@@ -167,3 +168,9 @@ PHONENUMBER_DEFAULT_REGION = 'RU'
 
 # Tests
 TEST_RUNNER = 'rainbowtests.test.runner.RainbowDiscoverRunner'
+
+# Django restframework
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':
+    ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']
+}
