@@ -7,8 +7,10 @@
    CLOSED: [2017-06-17 Sat 18:53]
 ** TODO add product model & crud
 ** TODO add photos to product model
-** TODO add flatpages
+** DONE add flatpages
+   CLOSED: [2017-06-18 Sun 20:01]
 ** TODO add contact page
 ** TODO add client admin
+** TODO add eng version
 
 

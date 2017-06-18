@@ -16,8 +16,11 @@ class ExtendedFlatPageForm(FlatpageForm):
 
 class ExtendedFlatPageAdmin(FlatPageAdmin, VersionAdmin):
     form = ExtendedFlatPageForm
+    list_display = ('id', 'title', 'slug', 'url')
+    list_display_links = ('id', 'title')
+    readonly_fields = ('slug', )
     fieldsets = ((None, {
-        'fields': ('url', 'title', 'content', 'sites')
+        'fields': ('url', 'title', 'slug', 'content', 'sites')
     }), (_('Advanced options'), {
         'classes': ('collapse', ),
         'fields':
