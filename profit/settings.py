@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_totp',
     'two_factor',
     'rest_framework',
+    'rosetta',
 
     # profit apps
     'profit',

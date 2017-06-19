@@ -19,7 +19,9 @@ router.register(r'pages', PagesViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('two_factor.urls', 'two_factor')),
+    url(r'^rosetta/', include('rosetta.urls')),
 ]
+
 urlpatterns += i18n_patterns(url(r'^', include(router.urls)))
 
 if settings.DEBUG:
