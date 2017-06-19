@@ -11,6 +11,7 @@
    CLOSED: [2017-06-18 Sun 20:01]
 ** TODO add contact page
 ** TODO add client admin
-** TODO add eng version
+** DONE add eng version
+   CLOSED: [2017-06-19 Mon 20:52]
 
 

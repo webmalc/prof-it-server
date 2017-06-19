@@ -24,3 +24,11 @@ body input, select, textarea {
   display: inline-block;
   margin: 0px 10px 0px 0px;
 }
+.ui-tabs .ui-tabs-nav li a {
+    -webkit-border-top-right-radius: 0px !important;
+    -moz-border-radius-topleft: 0px !important;
+    -webkit-border-top-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border: 0px !important;
+}
