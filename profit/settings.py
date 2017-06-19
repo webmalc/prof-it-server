@@ -53,12 +53,13 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django_otp.middleware.OTPMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'profit.middleware.AdminLocaleMiddleware',
+    # 'profit.middleware.AdminLocaleMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
@@ -107,11 +108,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-US'
+LANGUAGE_CODE = 'en'
 
 LANGUAGES = (('ru', 'Russian'), ('en', 'English'), )
 
-ADMIN_LANGUAGE_CODE = 'en-US'
+ADMIN_LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'Europe/Moscow'
 
