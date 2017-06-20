@@ -5,16 +5,17 @@
    CLOSED: [2017-06-17 Sat 15:46]
 ** DONE install and config restframework
    CLOSED: [2017-06-17 Sat 18:53]
-** TODO add product model & crud
-** TODO add photos to product model
 ** DONE add flatpages
-   CLOSED: [2017-06-18 Sun 20:01]
-** TODO add contact page
-** TODO add client admin
+   CLOSED: [2017-06-20 Tue 17:34]
 ** DONE add eng version
    CLOSED: [2017-06-19 Mon 20:52]
 
 
-** TODO tests
+** DONE tests
+** TODO add contact page
+** TODO add product model & crud
+** TODO add photos to product model
+   CLOSED: [2017-06-20 Tue 17:29]
 
 
+** TODO add client admin

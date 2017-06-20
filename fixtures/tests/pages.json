@@ -1,0 +1,66 @@
+[
+{
+    "model": "flatpages.flatpage",
+    "pk": 1,
+    "fields": {
+        "url": "/about/",
+        "title": "\u041e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438",
+        "title_ru": "\u041e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438",
+        "title_en": "About",
+        "content": "\u041e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u043a\u043e\u043d\u0442\u0435\u043d\u0442",
+        "content_ru": "\u041e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u043a\u043e\u043d\u0442\u0435\u043d\u0442",
+        "content_en": "About content",
+        "enable_comments": false,
+        "template_name": "",
+        "registration_required": false,
+        "sites": [
+            1
+        ]
+    }
+},
+{
+    "model": "flatpages.flatpage",
+    "pk": 2,
+    "fields": {
+        "url": "/services/",
+        "title": "\u0423\u0441\u043b\u0443\u0433\u0438",
+        "title_ru": "\u0423\u0441\u043b\u0443\u0433\u0438",
+        "title_en": "Services",
+        "content": "\u0423\u0441\u043b\u0443\u0433\u0438 \u043a\u043e\u043d\u0442\u0435\u043d\u0442",
+        "content_ru": "\u0423\u0441\u043b\u0443\u0433\u0438 \u043a\u043e\u043d\u0442\u0435\u043d\u0442",
+        "content_en": "Services content",
+        "enable_comments": false,
+        "template_name": "",
+        "registration_required": false,
+        "sites": [
+            1
+        ]
+    }
+},
+{
+    "model": "pages.extendedflatpage",
+    "pk": 1,
+    "fields": {
+        "slug": "about",
+        "keywords": "\u041e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u043a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430",
+        "keywords_ru": "\u041e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u043a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430",
+        "keywords_en": "About keywords",
+        "description": "\u041e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u043a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+        "description_ru": "\u041e \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u043a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+        "description_en": "About description"
+    }
+},
+{
+    "model": "pages.extendedflatpage",
+    "pk": 2,
+    "fields": {
+        "slug": "services",
+        "keywords": "\u0423\u0441\u043b\u0443\u0433\u0438 \u043a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430",
+        "keywords_ru": "\u0423\u0441\u043b\u0443\u0433\u0438 \u043a\u043b\u044e\u0447\u0435\u0432\u044b\u0435 \u0441\u043b\u043e\u0432\u0430",
+        "keywords_en": "Services keywords",
+        "description": "\u0423\u0441\u043b\u0443\u0433\u0438 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+        "description_ru": "\u0423\u0441\u043b\u0443\u0433\u0438 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+        "description_en": "Services description"
+    }
+}
+]
