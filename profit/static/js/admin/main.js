@@ -21,7 +21,14 @@ var admin = {
             textarea.val(editor.getSession().getValue());
         });
         return editor;
-    }
+    },
+    aceEditorOnClick: function(selector, id) {
+        $(selector).click(function(){
+            if (!$('#id_content_div' + id + '_en').length) {
+                admin.aceEditor($('#' + id + '_en'));
+            }
+        });
+    } 
 };
 
 $(document).ready(function($) {

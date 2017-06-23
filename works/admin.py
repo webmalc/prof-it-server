@@ -12,3 +12,6 @@ class TechnologyAdmin(VersionAdmin, TabbedExternalJqueryTranslationAdmin):
     list_display_links = ('id', 'title')
     search_fields = ('slug', 'title', 'description')
     readonly_fields = ('slug', )
+
+    class Media:
+        js = ('admin/js/works.js', )
