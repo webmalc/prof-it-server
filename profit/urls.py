@@ -8,6 +8,7 @@ from django.contrib import admin
 from rest_framework.routers import DefaultRouter
 
 from pages.views import PagesViewSet
+from works.views import TechnologyViewSet
 
 # from two_factor.admin import AdminSiteOTPRequired
 
@@ -15,6 +16,7 @@ from pages.views import PagesViewSet
 
 router = DefaultRouter()
 router.register(r'pages', PagesViewSet)
+router.register(r'technologies', TechnologyViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

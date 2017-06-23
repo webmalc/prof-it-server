@@ -29,6 +29,7 @@ class PageViewTest(ViewTestCase):
         response = self.client.get(url)
         self._is_succesful(response)
         self._json_contains(response, '/en/pages')
+        self._json_contains(response, '/en/technologies')
 
     def test_index_ru(self):
         """
@@ -38,6 +39,7 @@ class PageViewTest(ViewTestCase):
         response = self.client.get(url)
         self._is_succesful(response)
         self._json_contains(response, '/ru/pages')
+        self._json_contains(response, '/ru/technologies')
 
     def test_pages_list_ru(self):
         """
