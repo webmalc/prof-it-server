@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     # profit apps
     'profit',
+    'works',
     'pages',
 ]
 
