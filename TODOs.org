@@ -12,10 +12,11 @@
 
 
 ** DONE tests
+** TODO change imports to relative
+** TODO rewrite test (pytest)
 ** TODO add contact page
 ** TODO add product model & crud
 ** TODO add photos to product model
    CLOSED: [2017-06-20 Tue 17:29]
-
 
 ** TODO add client admin

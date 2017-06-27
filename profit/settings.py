@@ -14,7 +14,7 @@ import os
 
 # Local settings
 try:
-    from profit.local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
 
@@ -92,7 +92,8 @@ WSGI_APPLICATION = 'profit.wsgi.application'
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'django.contrib.auth.password_validation.\
+UserAttributeSimilarityValidator',
     },
     {
         'NAME':

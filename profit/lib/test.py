@@ -12,12 +12,12 @@ class ViewTestCase(TestCase):
         url = reverse(route_name, kwargs=params)
         redirect = reverse(redirect_route) + '?next=' + url
         response = self.client.get(url)
-        self.assertEquals(response.url, redirect)
-        self.assertEquals(response.status_code, 302)
+        assert response.url == redirect
+        assert response.status_code == 302
 
     def _login_superuser(self):
         login = self.client.login(username='admin', password='password')
-        self.assertEqual(login, True)
+        assert login
 
     def _is_succesful(self, response, title=None):
         """
@@ -25,9 +25,9 @@ class ViewTestCase(TestCase):
         :param title: html title
         :type title: string or none
         """
-        self.assertEqual(response.status_code, 200)
+        assert response.status_code == 200
         if title:
-            self.assertContains(response, title)
+            assert title in response.body
 
     def __check_dict(self, data, search):
         """
@@ -53,7 +53,7 @@ class ViewTestCase(TestCase):
                     break
         else:
             result = self.__check_dict(data, search)
-        self.assertTrue(result)
+        assert result
 
 
 @tag('unit', 'form')
