@@ -13,6 +13,7 @@
 
 ** DONE tests
 ** TODO change imports to relative
+** TODO add indexes
 ** TODO rewrite test (pytest)
 ** TODO add contact page
 ** TODO add product model & crud

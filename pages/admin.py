@@ -22,8 +22,8 @@ class ExtendedFlatPageAdmin(FlatPageAdmin, VersionAdmin,
     list_display_links = ('id', 'title')
     readonly_fields = ('slug', )
     fieldsets = ((None, {
-        'fields':
-        ('url', 'title', 'slug', 'content', 'sites', 'keywords', 'description')
+        'fields': ('url', 'title', 'slug', 'content', 'sites', 'keywords',
+                   'meta_description')
     }), (_('Advanced options'), {
         'classes': ('collapse', ),
         'fields': ('registration_required', 'template_name'),

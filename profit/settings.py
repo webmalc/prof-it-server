@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'two_factor',
     'rest_framework',
     'rosetta',
+    'ordered_model',
 
     # profit apps
     'profit',

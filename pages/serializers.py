@@ -7,5 +7,5 @@ class PageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ExtendedFlatPage
         fields = ('id', 'url', 'title', 'slug', 'content', 'keywords',
-                  'description', 'registration_required')
+                  'meta_description', 'registration_required')
         lookup_field = 'slug'

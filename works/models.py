@@ -1,12 +1,32 @@
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
 from django_extensions.db.models import TimeStampedModel, TitleDescriptionModel
+from ordered_model.models import OrderedModel
 
-from profit.models import SlugModel
+from profit.models import KeywordsDescModel, SlugModel
 
 
 class Technology(TimeStampedModel, TitleDescriptionModel, SlugModel):
     """ Technology class """
 
+    def __str__(self):
+        return self.title
+
     class Meta:
         get_latest_by = 'modified'
         ordering = ('title', )
         verbose_name_plural = "technologies"
+
+
+class Work(TimeStampedModel, TitleDescriptionModel, OrderedModel,
+           KeywordsDescModel):
+    """ Work class """
+
+    content = models.TextField(_('content'), db_index=True)
+    technologies = models.ManyToManyField(
+        Technology,
+        verbose_name=_('technologies'),
+        related_name='technologies')
+
+    class Meta(OrderedModel.Meta):
+        pass

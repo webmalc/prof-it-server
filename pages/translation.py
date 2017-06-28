@@ -12,5 +12,5 @@ class BasePagesTranslationOptions(TranslationOptions):
 
 @register(ExtendedFlatPage)
 class PagesTranslationOptions(TranslationOptions):
-    fields = ('keywords', 'description')
+    fields = ('keywords', 'meta_description')
     required_languages = ('ru', )
