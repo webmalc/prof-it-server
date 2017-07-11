@@ -8,6 +8,8 @@ from profit.models import KeywordsDescModel, SlugModel
 
 class Technology(TimeStampedModel, TitleDescriptionModel, SlugModel):
     """ Technology class """
+    works = models.ManyToManyField(
+        'Work', verbose_name=_('works'), related_name='works')
 
     def __str__(self):
         return self.title
@@ -24,7 +26,8 @@ class Work(TimeStampedModel, TitleDescriptionModel, OrderedModel,
 
     content = models.TextField(_('content'), db_index=True)
     technologies = models.ManyToManyField(
-        Technology,
+        'Technology',
+        through=Technology.works.through,
         verbose_name=_('technologies'),
         related_name='technologies')
 

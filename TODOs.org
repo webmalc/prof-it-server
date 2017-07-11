@@ -12,6 +12,7 @@
 
 
 ** DONE tests
+** TODO add test for works
 ** TODO change imports to relative
 ** TODO add indexes
 ** TODO rewrite test (pytest)
@@ -21,3 +22,4 @@
    CLOSED: [2017-06-20 Tue 17:29]
 
 ** TODO add client admin
+** TODO add is_enabled field to models
