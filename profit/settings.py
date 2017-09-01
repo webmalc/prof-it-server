@@ -153,7 +153,62 @@ FIXTURE_DIRS = (os.path.join(BASE_DIR, 'fixtures'), )
 LOCALE_PATHS = (os.path.join(os.path.dirname(__file__), "locale"),
                 os.path.join(os.path.dirname(__file__), "app_locale"), )
 
-EMAIL_SUBJECT_PREFIX = '[vishleva.com]: '
+EMAIL_SUBJECT_PREFIX = '[prof-it.group]: '
+
+# Logs
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'root': {
+        'level': 'WARNING',
+        # 'handlers': ['sentry', 'watchtower'],
+    },
+    'formatters': {
+        'verbose': {
+            'format':
+            "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt':
+            "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'logs/progit.log',
+            'formatter': 'verbose'
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'filters': ['require_debug_false'],
+            'formatter': 'verbose'
+        },
+        # 'sentry': {
+        #     'level': 'ERROR',
+        #     'class':
+        #     'raven.contrib.django.raven_compat.handlers.SentryHandler',
+        #     'filters': ['require_debug_false'],
+        #     'tags': {
+        #         'custom-tag': 'x'
+        #     },
+        # },
+    },
+    'loggers': {
+        'billing': {
+            'handlers': ['file', 'mail_admins'],
+            'level': 'DEBUG',
+        },
+    }
+}
 
 # Two factor auth
 LOGIN_URL = 'two_factor:login'

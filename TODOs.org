@@ -10,8 +10,8 @@
 ** DONE add eng version
    CLOSED: [2017-06-19 Mon 20:52]
 
-
 ** DONE tests
+** TODO sentry
 ** TODO add test for works
 ** TODO change imports to relative
 ** TODO add indexes

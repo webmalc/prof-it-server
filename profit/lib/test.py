@@ -46,6 +46,9 @@ class ViewTestCase(TestCase):
         """
         result = False
         data = response.json()
+        if 'results' in data:
+            data = data['results']
+
         if type(data) == list:
             for entry in data:
                 result = self.__check_dict(entry, search)

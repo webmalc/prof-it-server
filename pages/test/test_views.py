@@ -1,6 +1,5 @@
 from django.contrib.auth.models import User
 from django.utils import translation
-
 from pages.models import ExtendedFlatPage
 from profit.lib.test import ViewTestCase
 
