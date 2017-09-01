@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from pages.models import ExtendedFlatPage
-from pages.serializers import PageSerializer
+from .models import ExtendedFlatPage
+from .serializers import PageSerializer
 
 
 class PagesViewSet(viewsets.ReadOnlyModelViewSet):

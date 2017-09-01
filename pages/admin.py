@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 from modeltranslation.admin import TabbedExternalJqueryTranslationAdmin
 from reversion.admin import VersionAdmin
 
-from pages.models import ExtendedFlatPage
+from .models import ExtendedFlatPage
 
 
 class ExtendedFlatPageForm(FlatpageForm):

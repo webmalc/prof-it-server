@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from works.models import Technology, Work
+from .models import Technology, Work
 
 
 class TechnologySerializer(serializers.HyperlinkedModelSerializer):

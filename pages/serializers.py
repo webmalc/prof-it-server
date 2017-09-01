@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from pages.models import ExtendedFlatPage
+from .models import ExtendedFlatPage
 
 
 class PageSerializer(serializers.HyperlinkedModelSerializer):

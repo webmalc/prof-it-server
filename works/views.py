@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from works.models import Technology, Work
-from works.serializers import TechnologySerializer, WorkSerializer
+from .models import Technology, Work
+from .serializers import TechnologySerializer, WorkSerializer
 
 
 class TechnologyViewSet(viewsets.ReadOnlyModelViewSet):

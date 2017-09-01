@@ -1,7 +1,7 @@
 from django.contrib.flatpages.models import FlatPage
 from modeltranslation.translator import TranslationOptions, register
 
-from pages.models import ExtendedFlatPage
+from .models import ExtendedFlatPage
 
 
 @register(FlatPage)

@@ -11,16 +11,19 @@
    CLOSED: [2017-06-19 Mon 20:52]
 
 ** DONE tests
-** TODO add indexes
-** TODO add test for works
-** TODO change imports to relative
-** TODO sentry
+** DONE add indexes
+   CLOSED: [2017-09-01 Fri 17:58]
 ** DONE rewrite test (pytest)
    CLOSED: [2017-09-01 Fri 17:39]
-** TODO add contact page
-** TODO add product model & crud
-** TODO add photos to product model
+** DONE change imports to relative
+   CLOSED: [2017-09-01 Fri 18:00]
+** DONE add work model & crud
+   CLOSED: [2017-09-01 Fri 18:01]
+** TODO add test for works
+** TODO add is_enabled field to models
+** TODO add photos to work model
    CLOSED: [2017-06-20 Tue 17:29]
 
+** TODO sentry
+** TODO add contact page
 ** TODO add client admin
-** TODO add is_enabled field to models

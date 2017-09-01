@@ -3,7 +3,7 @@ from modeltranslation.admin import TabbedExternalJqueryTranslationAdmin
 from ordered_model.admin import OrderedModelAdmin
 from reversion.admin import VersionAdmin
 
-from works.models import Technology, Work
+from .models import Technology, Work
 
 
 @admin.register(Technology)

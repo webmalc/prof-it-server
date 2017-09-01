@@ -1,6 +1,6 @@
 from modeltranslation.translator import TranslationOptions, register
 
-from works.models import Technology, Work
+from .models import Technology, Work
 
 
 @register(Technology)
