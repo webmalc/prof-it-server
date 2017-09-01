@@ -11,11 +11,12 @@
    CLOSED: [2017-06-19 Mon 20:52]
 
 ** DONE tests
-** TODO sentry
+** TODO add indexes
 ** TODO add test for works
 ** TODO change imports to relative
-** TODO add indexes
-** TODO rewrite test (pytest)
+** TODO sentry
+** DONE rewrite test (pytest)
+   CLOSED: [2017-09-01 Fri 17:39]
 ** TODO add contact page
 ** TODO add product model & crud
 ** TODO add photos to product model
