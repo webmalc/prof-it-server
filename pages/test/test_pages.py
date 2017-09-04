@@ -18,7 +18,7 @@ def test_pages_list(lang, content, client, settings):
 
 @pytest.mark.parametrize('lang, content', (('ru', 'О компании контент'),
                                            ('en', 'About keywords'), ))
-def test_pages_display(lang, content, client, settings):
+def test_page_display(lang, content, client, settings):
     settings.LANGUAGE_CODE = lang
     response = client.get(
         reverse('extendedflatpage-detail', kwargs={'slug': 'about'}))

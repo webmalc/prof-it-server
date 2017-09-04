@@ -25,6 +25,11 @@ class WorkAdmin(VersionAdmin, OrderedModelAdmin,
     list_filter = ('created', 'modified', 'technologies')
     list_display_links = ('id', 'title')
     search_fields = ('content', 'title', 'description', 'technologies__title')
+    fieldsets = (('General', {
+        'fields': ('title', 'description', 'content', 'technologies', )
+    }), ('Meta', {
+        'fields': ('keywords', 'meta_description', )
+    }), )
 
     class Media:
         js = ('admin/js/works.js', )
