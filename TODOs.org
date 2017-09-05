@@ -25,8 +25,8 @@
    CLOSED: [2017-09-05 Tue 15:59]
 ** DONE add is_enabled field to models
    CLOSED: [2017-09-05 Tue 16:21]
-** TODO add photos to work model
-   CLOSED: [2017-06-20 Tue 17:29]
+** DONE add photos to work model
+   CLOSED: [2017-09-05 Tue 18:40]
 
 ** TODO sentry
 ** TODO add contact page

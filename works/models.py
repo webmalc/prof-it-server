@@ -67,7 +67,8 @@ class Photo(TitleDescriptionModel, OrderedModel):
         format='JPEG',
         options={'quality': 90})
 
-    work = models.ForeignKey(Work, on_delete=models.CASCADE)
+    work = models.ForeignKey(
+        Work, on_delete=models.CASCADE, related_name='photos')
 
     def __str__(self):
         return self.title if self.title else 'photo #{}'.format(self.id)
