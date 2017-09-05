@@ -11,3 +11,4 @@ class PagesViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = ExtendedFlatPage.objects.all()
     serializer_class = PageSerializer
     lookup_field = 'slug'
+    search_fields = ('url', 'title', 'slug', 'content')

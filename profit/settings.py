@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_static',
     'django_otp.plugins.otp_totp',
     'two_factor',
+    'django_filters',
     'rest_framework',
     'rosetta',
     'ordered_model',
@@ -243,5 +244,9 @@ REST_FRAMEWORK = {
     'PAGE_SIZE':
     100,
     'DEFAULT_PERMISSION_CLASSES':
-    ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']
+    ('rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly', ),
+    'DEFAULT_FILTER_BACKENDS':
+    ('django_filters.rest_framework.DjangoFilterBackend',
+     'rest_framework.filters.SearchFilter',
+     'rest_framework.filters.OrderingFilter', ),
 }

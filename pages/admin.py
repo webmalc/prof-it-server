@@ -21,6 +21,7 @@ class ExtendedFlatPageAdmin(FlatPageAdmin, VersionAdmin,
     list_display = ('id', 'title', 'slug', 'url')
     list_display_links = ('id', 'title')
     readonly_fields = ('slug', )
+    search_fields = ('url', 'title', 'slug', 'content')
     fieldsets = ((None, {
         'fields': ('url', 'title', 'slug', 'content', 'sites', 'keywords',
                    'meta_description')

@@ -11,6 +11,7 @@ class TechnologyViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Technology.objects.all()
     serializer_class = TechnologySerializer
     lookup_field = 'slug'
+    search_fields = ('slug', 'title', 'description')
 
 
 class WorkViewSet(viewsets.ReadOnlyModelViewSet):
@@ -19,3 +20,5 @@ class WorkViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Work.objects.all()
     serializer_class = WorkSerializer
+    search_fields = ('content', 'title', 'description', 'technologies__title')
+    filter_fields = ('technologies', )

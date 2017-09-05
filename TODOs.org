@@ -1,4 +1,4 @@
-* TODO Issues
+* Issues
 ** DONE config django base
    CLOSED: [2017-06-17 Sat 13:50]
 ** DONE two factor auth
@@ -21,7 +21,8 @@
    CLOSED: [2017-09-01 Fri 18:01]
 ** DONE add test for works
    CLOSED: [2017-09-04 Mon 17:06]
-** TODO filters and search for rest endpoints
+** DONE filters and search for rest endpoints
+   CLOSED: [2017-09-05 Tue 15:59]
 ** TODO add is_enabled field to models
 ** TODO add photos to work model
    CLOSED: [2017-06-20 Tue 17:29]
