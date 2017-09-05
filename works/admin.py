@@ -1,5 +1,6 @@
 from django.contrib import admin
-from modeltranslation.admin import TabbedExternalJqueryTranslationAdmin
+from modeltranslation.admin import (TabbedExternalJqueryTranslationAdmin,
+                                    TranslationTabularInline)
 from ordered_model.admin import OrderedModelAdmin
 from reversion.admin import VersionAdmin
 
@@ -18,7 +19,7 @@ class TechnologyAdmin(VersionAdmin, TabbedExternalJqueryTranslationAdmin):
         js = ('admin/js/works.js', )
 
 
-class PhotoInline(admin.TabularInline):
+class PhotoInline(TranslationTabularInline):
     """
     Work photos admin
     """
