@@ -21,4 +21,4 @@ class WorkViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Work.objects.all()
     serializer_class = WorkSerializer
     search_fields = ('content', 'title', 'description', 'technologies__title')
-    filter_fields = ('technologies', )
+    filter_fields = ('technologies', 'is_enabled')

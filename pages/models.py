@@ -1,9 +1,9 @@
 from django.contrib.flatpages.models import FlatPage
 
-from profit.models import KeywordsDescModel, SlugModel
+from profit.models import MetaModel, SlugModel
 
 
-class ExtendedFlatPage(FlatPage, SlugModel, KeywordsDescModel):
+class ExtendedFlatPage(FlatPage, SlugModel, MetaModel):
     """
     Page class
     """

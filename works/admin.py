@@ -21,12 +21,14 @@ class TechnologyAdmin(VersionAdmin, TabbedExternalJqueryTranslationAdmin):
 @admin.register(Work)
 class WorkAdmin(VersionAdmin, OrderedModelAdmin,
                 TabbedExternalJqueryTranslationAdmin):
-    list_display = ('id', 'title', 'created', 'modified', 'move_up_down_links')
-    list_filter = ('created', 'modified', 'technologies')
+    list_display = ('id', 'title', 'created', 'modified', 'is_enabled',
+                    'move_up_down_links')
+    list_filter = ('created', 'modified', 'technologies', 'is_enabled', )
     list_display_links = ('id', 'title')
     search_fields = ('content', 'title', 'description', 'technologies__title')
     fieldsets = (('General', {
-        'fields': ('title', 'description', 'content', 'technologies', )
+        'fields':
+        ('title', 'description', 'content', 'technologies', 'is_enabled', )
     }), ('Meta', {
         'fields': ('keywords', 'meta_description', )
     }), )

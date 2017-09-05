@@ -21,4 +21,5 @@ class WorkSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Work
         fields = ('id', 'title', 'description', 'content', 'created',
-                  'modified', 'meta_description', 'keywords', 'technologies')
+                  'modified', 'meta_description', 'keywords', 'technologies',
+                  'is_enabled')

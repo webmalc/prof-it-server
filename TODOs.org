@@ -23,7 +23,8 @@
    CLOSED: [2017-09-04 Mon 17:06]
 ** DONE filters and search for rest endpoints
    CLOSED: [2017-09-05 Tue 15:59]
-** TODO add is_enabled field to models
+** DONE add is_enabled field to models
+   CLOSED: [2017-09-05 Tue 16:21]
 ** TODO add photos to work model
    CLOSED: [2017-06-20 Tue 17:29]
 

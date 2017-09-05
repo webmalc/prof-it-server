@@ -18,13 +18,13 @@ class ExtendedFlatPageForm(FlatpageForm):
 class ExtendedFlatPageAdmin(FlatPageAdmin, VersionAdmin,
                             TabbedExternalJqueryTranslationAdmin):
     form = ExtendedFlatPageForm
-    list_display = ('id', 'title', 'slug', 'url')
+    list_display = ('id', 'title', 'slug', 'url', 'is_enabled')
     list_display_links = ('id', 'title')
     readonly_fields = ('slug', )
     search_fields = ('url', 'title', 'slug', 'content')
     fieldsets = ((None, {
         'fields': ('url', 'title', 'slug', 'content', 'sites', 'keywords',
-                   'meta_description')
+                   'meta_description', 'is_enabled')
     }), (_('Advanced options'), {
         'classes': ('collapse', ),
         'fields': ('registration_required', 'template_name'),

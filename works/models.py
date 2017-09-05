@@ -3,7 +3,7 @@ from django.utils.translation import ugettext_lazy as _
 from django_extensions.db.models import TimeStampedModel, TitleDescriptionModel
 from ordered_model.models import OrderedModel
 
-from profit.models import KeywordsDescModel, SlugModel
+from profit.models import MetaModel, SlugModel
 
 
 class Technology(TimeStampedModel, TitleDescriptionModel, SlugModel):
@@ -20,8 +20,7 @@ class Technology(TimeStampedModel, TitleDescriptionModel, SlugModel):
         verbose_name_plural = "technologies"
 
 
-class Work(TimeStampedModel, TitleDescriptionModel, OrderedModel,
-           KeywordsDescModel):
+class Work(TimeStampedModel, TitleDescriptionModel, OrderedModel, MetaModel):
     """ Work class """
 
     content = models.TextField(_('content'), db_index=True)

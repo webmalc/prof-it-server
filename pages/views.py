@@ -12,3 +12,4 @@ class PagesViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = PageSerializer
     lookup_field = 'slug'
     search_fields = ('url', 'title', 'slug', 'content')
+    filter_fields = ('is_enabled', )

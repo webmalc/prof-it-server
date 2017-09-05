@@ -18,13 +18,15 @@ class SlugModel(models.Model):
         abstract = True
 
 
-class KeywordsDescModel(models.Model):
-    """ KeywordsDescModel mixin """
+class MetaModel(models.Model):
+    """ MetaModel mixin """
 
     keywords = models.CharField(
         max_length=255, db_index=True, verbose_name=_('keywords'))
     meta_description = models.CharField(
         max_length=255, db_index=True, verbose_name=_('meta_description'))
+    is_enabled = models.BooleanField(
+        default=True, db_index=True, verbose_name=_('is enabled'))
 
     class Meta:
         abstract = True
