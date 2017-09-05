@@ -24,7 +24,8 @@ class PhotoInline(TranslationTabularInline):
     Work photos admin
     """
     model = Photo
-    fields = ('title', 'photo', 'is_default')
+    fields = ('title', 'photo_tag', 'photo', 'is_default')
+    readonly_fields = ('photo_tag', )
 
 
 @admin.register(Work)

@@ -1,11 +1,11 @@
-from django.core.urlresolvers import reverse
 from django.db import models
+from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext_lazy as _
 from django_extensions.db.models import TimeStampedModel, TitleDescriptionModel
-from imagekit.models import ImageSpecField, ProcessedImageField
-from imagekit.processors import ResizeToCover, Thumbnail
 from ordered_model.models import OrderedModel
 
+from imagekit.models import ImageSpecField, ProcessedImageField
+from imagekit.processors import ResizeToCover, Thumbnail
 from profit.models import MetaModel, SlugModel
 
 
@@ -71,6 +71,14 @@ class Photo(TitleDescriptionModel, OrderedModel):
 
     def __str__(self):
         return self.title if self.title else 'photo #{}'.format(self.id)
+
+    def photo_tag(self):
+        return mark_safe("""<a href="{}" target="_blank">
+            <img src="{}" width="{}" height="{}" />
+            </a>""".format(self.photo.url, self.thumbnail_xs.url,
+                           self.thumbnail_xs.width, self.thumbnail_xs.height))
+
+    photo_tag.short_description = 'Preview'
 
     class Meta:
         ordering = ['-is_default']
