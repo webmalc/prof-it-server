@@ -3,7 +3,7 @@ from modeltranslation.admin import TabbedExternalJqueryTranslationAdmin
 from ordered_model.admin import OrderedModelAdmin
 from reversion.admin import VersionAdmin
 
-from .models import Technology, Work
+from .models import Photo, Technology, Work
 
 
 @admin.register(Technology)
@@ -18,6 +18,14 @@ class TechnologyAdmin(VersionAdmin, TabbedExternalJqueryTranslationAdmin):
         js = ('admin/js/works.js', )
 
 
+class PhotoInline(admin.TabularInline):
+    """
+    Work photos admin
+    """
+    model = Photo
+    fields = ('title', 'photo', 'is_default')
+
+
 @admin.register(Work)
 class WorkAdmin(VersionAdmin, OrderedModelAdmin,
                 TabbedExternalJqueryTranslationAdmin):
@@ -26,6 +34,7 @@ class WorkAdmin(VersionAdmin, OrderedModelAdmin,
     list_filter = ('created', 'modified', 'technologies', 'is_enabled', )
     list_display_links = ('id', 'title')
     search_fields = ('content', 'title', 'description', 'technologies__title')
+    inlines = (PhotoInline, )
     fieldsets = (('General', {
         'fields':
         ('title', 'description', 'content', 'technologies', 'is_enabled', )

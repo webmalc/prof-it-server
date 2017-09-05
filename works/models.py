@@ -1,6 +1,9 @@
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django_extensions.db.models import TimeStampedModel, TitleDescriptionModel
+from imagekit.models import ImageSpecField, ProcessedImageField
+from imagekit.processors import ResizeToCover, Thumbnail
 from ordered_model.models import OrderedModel
 
 from profit.models import MetaModel, SlugModel
@@ -32,3 +35,42 @@ class Work(TimeStampedModel, TitleDescriptionModel, OrderedModel, MetaModel):
 
     class Meta(OrderedModel.Meta):
         pass
+
+
+class Photo(TitleDescriptionModel, OrderedModel):
+    """
+    Photo class
+    """
+    is_default = models.BooleanField(
+        default=False, verbose_name=_('is default?'))
+    photo = ProcessedImageField(
+        upload_to='works_photos',
+        processors=[ResizeToCover(600, 600, False)],
+        format='JPEG',
+        options={'quality': 90},
+        verbose_name=_('photo'))
+    thumbnail = ImageSpecField(
+        source='photo',
+        processors=[Thumbnail(120, 120)],
+        format='JPEG',
+        options={'quality': 90})
+
+    thumbnail_xs = ImageSpecField(
+        source='photo',
+        processors=[Thumbnail(30, 30)],
+        format='JPEG',
+        options={'quality': 90})
+
+    preview_photo = ImageSpecField(
+        source='photo',
+        processors=[ResizeToCover(300, 300, False)],
+        format='JPEG',
+        options={'quality': 90})
+
+    work = models.ForeignKey(Work, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title if self.title else 'photo #{}'.format(self.id)
+
+    class Meta:
+        ordering = ['-is_default']
