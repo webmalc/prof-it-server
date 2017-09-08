@@ -1,29 +1,30 @@
 {
-  "name": "profit",
-  "version": "1.0.0",
-  "description": "profit server",
-  "main": "index.js",
-  "dependencies": {
-    "ace-builds": "^1.2.5",
-    "font-awesome": "^4.6.3",
-    "jquery": "^3.1.1",
-    "jquery.inputmask": "^3.3.3"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/webmalc/prof-it-server.git"
-  },
-  "keywords": [
-    "profit"
-  ],
-  "author": "m@webmalc.pw",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/webmalc/prof-it-server/issues"
-  },
-  "homepage": "https://github.com/webmalc/prof-it-server#readme"
+    "name": "profit",
+    "version": "1.0.0",
+    "description": "profit server",
+    "main": "index.js",
+    "dependencies": {
+        "ace-builds": "^1.2.5",
+        "font-awesome": "^4.6.3",
+        "jquery": "^3.1.1",
+        "jquery.inputmask": "^3.3.3",
+        "tinymce": "^4.5.7"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/webmalc/prof-it-server.git"
+    },
+    "keywords": [
+        "profit"
+    ],
+    "author": "m@webmalc.pw",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/webmalc/prof-it-server/issues"
+    },
+    "homepage": "https://github.com/webmalc/prof-it-server#readme"
 }

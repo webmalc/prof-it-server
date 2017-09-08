@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'profit',
     'works',
     'pages',
+    'clients',
 ]
 
 MIDDLEWARE = [

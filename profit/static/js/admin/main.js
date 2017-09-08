@@ -23,12 +23,33 @@ var admin = {
         return editor;
     },
     aceEditorOnClick: function(selector, id) {
-        $(selector).click(function(){
+        $(selector).click(function() {
             if (!$('#id_content_div' + id + '_en').length) {
                 admin.aceEditor($('#' + id + '_en'));
             }
         });
-    } 
+    },
+    tinymce: function(selector) {
+        tinymce.init({
+            selector: selector,
+            height: 500,
+            theme: 'modern',
+            forced_root_block: false,
+            plugins: [
+                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc spellchecker'
+            ],
+            toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar2: 'print preview media | forecolor backcolor emoticons | codesample spellchecker',
+            spellchecker_languages: "Russian=ru,Ukrainian=uk,English=en",
+            spellchecker_language: "ru", // default language
+            spellchecker_rpc_url: "https://speller.yandex.net/services/tinyspell",
+            image_advtab: true
+        });
+    },
+
 };
 
 $(document).ready(function($) {
@@ -37,7 +58,7 @@ $(document).ready(function($) {
         event.preventDefault();
         $(this).prev('input').trigger('click');
     });
-     
+
     $('.vTimeField').inputmask({
         mask: '99:99:99',
     });
@@ -77,7 +98,7 @@ $(document).ready(function($) {
     // admin filter select
     (function() {
         $('.admin-filter-select').change(function() {
-            window.location.href =  $(this).val();
+            window.location.href = $(this).val();
         });
     }());
 });

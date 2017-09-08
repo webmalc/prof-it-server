@@ -28,6 +28,8 @@
 ** DONE add photos to work model
    CLOSED: [2017-09-05 Tue 18:40]
 
-** TODO sentry
 ** TODO add contact page
+** TODO add contact page tests
+** TODO sentry
 ** TODO add client admin
+   
