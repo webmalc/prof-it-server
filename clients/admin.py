@@ -31,8 +31,8 @@ class EmailAdmin(VersionAdmin):
         if object_id:
             Email.objects.filter(
                 pk=object_id, is_readed=False).update(is_readed=True)
-        return super().changeform_view(
-            request, object_id=None, form_url='', extra_context=None)
+        return super().changeform_view(request, object_id, form_url,
+                                       extra_context)
 
     class Media:
         js = ('admin/js/clients.js', )

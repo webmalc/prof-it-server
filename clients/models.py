@@ -2,6 +2,8 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django_extensions.db.models import TimeStampedModel
 
+from profit.tasks import mail_managers_task
+
 
 class Email(TimeStampedModel):
     """ Email class """
@@ -24,3 +26,11 @@ class Email(TimeStampedModel):
             name=self.name,
             contacts=self.contacts,
             date=self.created.strftime('%c'))
+
+    def save(self, *args, **kwargs):
+        id = self.id
+        super().save(*args, **kwargs)
+        if not id:
+            mail_managers_task.delay(
+                self.subject, 'emails/contact_form.html',
+                dict(filter(lambda x: x[0][0] != '_', self.__dict__.items())))

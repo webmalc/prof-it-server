@@ -1,0 +1,14 @@
+{% extends 'emails/base.html' %}
+{% load humanize %}
+{% load i18n %}
+
+{% block title %}
+    {% trans subject %}
+{% endblock %}
+
+{% block content %}
+    <p><strong>{% trans "Name" %}</strong>: {{ name }}</p>
+    <p><strong>{% trans "Contacts" %}</strong>: {{ contacts }}</p>
+    <p><strong>{% trans "Text" %}</strong>: {{ text|linebreaksbr }}</p>
+    <p><strong>{% trans "Date" %}</strong>: {{ created }}</p>
+{% endblock %}

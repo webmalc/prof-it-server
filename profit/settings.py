@@ -206,7 +206,7 @@ LOGGING = {
         # },
     },
     'loggers': {
-        'billing': {
+        'profit': {
             'handlers': ['file', 'mail_admins'],
             'level': 'DEBUG',
         },

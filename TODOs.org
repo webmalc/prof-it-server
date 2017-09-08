@@ -29,6 +29,7 @@
    CLOSED: [2017-09-05 Tue 18:40]
 
 ** TODO add contact page
+** TODO add mailer tests
 ** TODO add contact page tests
 ** TODO sentry
 ** TODO add client admin

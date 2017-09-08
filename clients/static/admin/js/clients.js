@@ -1,4 +1,4 @@
 $(document).ready(function() {
     'use strict';
-    admin.tinymce('#id_text');
+    // admin.tinymce('#id_text');
 });
