@@ -28,7 +28,8 @@
 ** DONE add photos to work model
    CLOSED: [2017-09-05 Tue 18:40]
 
-** TODO add contact page
+** DONE add contact page
+   CLOSED: [2017-09-08 Fri 18:26]
 ** TODO add mailer tests
 ** TODO add contact page tests
 ** TODO sentry

@@ -1,3 +1,12 @@
-# from django.shortcuts import render
+from rest_framework import mixins, viewsets
 
-# Create your views here.
+from .models import Email
+from .serializers import EmailSerializer
+
+
+class EmailViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
+    """
+    Email viewset
+    """
+    queryset = Email.objects.all()
+    serializer_class = EmailSerializer

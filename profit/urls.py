@@ -8,6 +8,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from rest_framework.routers import DefaultRouter
 
+from clients.views import EmailViewSet
 from pages.views import PagesViewSet
 from works.views import PhotoViewSet, TechnologyViewSet, WorkViewSet
 
@@ -20,6 +21,7 @@ router.register(r'pages', PagesViewSet)
 router.register(r'technologies', TechnologyViewSet)
 router.register(r'works', WorkViewSet)
 router.register(r'photos', PhotoViewSet)
+router.register(r'emails', EmailViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
