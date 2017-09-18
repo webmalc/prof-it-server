@@ -6,11 +6,11 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 
 
-def mail_managers(subject, template, data):
+def mail_managers(subject, template='emails/base_manager.html', data=None):
     base_mail_managers(
         subject=subject,
         message='',
-        html_message=render_to_string(template, data))
+        html_message=render_to_string(template, data if data else {}))
     logging.getLogger('profit').info(
         'Send mail to managers. Subject: {}'.format(subject))
 

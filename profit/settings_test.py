@@ -7,5 +7,8 @@ DATABASES = {
     }
 }
 
+ADMINS = (('admin', 'admin@example.com'), ('manager', 'manager@example.com'))
+MANAGERS = ADMINS
+
 LOGGING.pop('root', None)
 CELERY_ALWAYS_EAGER = True

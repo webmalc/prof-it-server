@@ -14,7 +14,7 @@ import os
 
 # Local settings
 try:
-    from .local_settings import *
+    from .settings_local import *
 except ImportError:
     pass
 
@@ -25,6 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 INSTALLED_APPS = [
     'modeltranslation',
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.humanize',
     'django.contrib.auth',
@@ -57,6 +58,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     # 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -252,3 +254,6 @@ REST_FRAMEWORK = {
      'rest_framework.filters.SearchFilter',
      'rest_framework.filters.OrderingFilter', ),
 }
+
+# Django corsheaders
+CORS_ORIGIN_WHITELIST = ('prof-it.group', 'localhost:8000', '127.0.0.1:9000')
