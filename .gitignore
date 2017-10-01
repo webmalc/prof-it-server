@@ -90,7 +90,7 @@ GTAGS
 .#*
 
 #Project
-local_settings.py
+profit/settings_local.py
 /nbproject/private/
 node_modules
 google_api_key.json
