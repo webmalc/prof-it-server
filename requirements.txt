@@ -1,9 +1,11 @@
 amqp==2.1.4
 apipkg==1.4
 arrow==0.10.0
+asn1crypto==0.24.0
 Babel==2.4.0
 billiard==3.5.0.2
 celery==4.0.2
+cffi==1.11.4
 cryptography==1.8.2
 Django==1.11.1
 django-appconf==1.0.2
@@ -36,7 +38,6 @@ olefile==0.44
 pep8==1.7.0
 pexpect==4.2.1
 phonenumberslite==8.5.0
-pickleshare==0.7.4
 pilkit==2.0
 Pillow==4.2.1
 polib==1.0.8
@@ -44,6 +45,8 @@ prompt-toolkit==1.0.14
 psycopg2==2.7.3.1
 ptyprocess==0.5.1
 py==1.4.34
+py-moneyed==0.7.0
+pycparser==2.18
 pytest==3.1.2
 pytest-cache==1.0
 pytest-django==3.1.2
@@ -54,11 +57,8 @@ python-dateutil==2.6.0
 pytz==2017.2
 qrcode==4.0.4
 redis==2.10.6
-simplegeneric==0.8.1
 sqlparse==0.2.3
 tornado==4.5.2
-traitlets==4.3.2
 Unidecode==0.4.20
 vine==1.1.3
-wcwidth==0.1.7
 Werkzeug==0.12.2
